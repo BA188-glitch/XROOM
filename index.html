@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR>
+<html lang="pt-BR">
 
 <head>
-  <meta charset=" UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>INICIO | myblog | XRoom </title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
+  <table>
   <caption>Calendário de Eventos do CorredorX</caption>
   <tbody>
     <tr>
@@ -16,6 +18,7 @@
       <td>Interlagos</td>
     </tr>
   </tbody>
+  </table>
   <header>
     <h1><strong>RACER_X</strong></h1>
     <h2>Seja Bem vindo ao site oficial do CorredorX</h2>
@@ -24,6 +27,34 @@
     <section class="banner_principal">
       <img src="Imagens/20970578412312143.jpg" alt="BMW AT LEMANS">
 
+    </section>
+    <section class="broadcast" aria-labelledby="broadcast-title">
+      <div class="broadcast-heading"><div><p class="eyebrow">CORREDORX / PIT WALL</p><h2 id="broadcast-title">Dentro da pista.</h2></div><p>Transmissões e momentos das corridas</p></div>
+      <div class="broadcast-tabs" role="tablist" aria-label="Vídeos do CorredorX">
+        <button id="tab-youtube" role="tab" aria-selected="true" aria-controls="panel-youtube" tabindex="0">Live · YouTube</button>
+        <button id="tab-twitch" role="tab" aria-selected="false" aria-controls="panel-twitch" tabindex="-1">Live · Twitch</button>
+        <button id="tab-highlights" role="tab" aria-selected="false" aria-controls="panel-highlights" tabindex="-1">Highlights · 50s</button>
+      </div>
+      <div id="panel-youtube" class="broadcast-panel" role="tabpanel" aria-labelledby="tab-youtube">
+        <div class="broadcast-caption"><h3>YouTube / CorredorX23</h3><span>Canal de transmissão</span></div>
+        <div class="stream-frame" id="youtube-stream"></div>
+        <p>Quando a transmissão enviada pelo Restream estiver pública no YouTube, acompanhe aqui. Se o player estiver indisponível, <a href="https://www.youtube.com/@CorredorX23/live" target="_blank" rel="noopener noreferrer">abra a live no YouTube ↗</a>.</p>
+      </div>
+      <div id="panel-twitch" class="broadcast-panel" role="tabpanel" aria-labelledby="tab-twitch" hidden>
+        <div class="broadcast-caption"><h3>Twitch / fv46__corred0x23</h3><span>Canal de transmissão</span></div>
+        <div class="stream-frame" id="twitch-stream"></div>
+        <p>O player mostra quando o canal está ao vivo ou offline. <a href="https://www.twitch.tv/fv46__corred0x23" target="_blank" rel="noopener noreferrer">Assistir na Twitch ↗</a></p>
+      </div>
+      <div id="panel-highlights" class="broadcast-panel" role="tabpanel" aria-labelledby="tab-highlights" hidden>
+        <div class="broadcast-caption"><div><h3>Highlights em cascata</h3><p>Uma sequência de cortes de até 50 segundos. Escolha um vídeo para começar.</p></div><span>50s / CORTE</span></div>
+        <div class="highlights-layout">
+          <div><div class="stream-frame"><div id="highlight-player"></div></div><p id="highlight-status" role="status">Selecione um trecho para assistir.</p><div class="highlight-controls"><button id="highlight-pause" disabled>Pausar</button><button id="highlight-next" disabled>Próximo trecho →</button><a id="highlight-original" href="https://www.youtube.com/watch?v=InYk4SZSELs" target="_blank" rel="noopener noreferrer">Vídeo completo ↗</a></div></div>
+          <div class="highlight-cascade" aria-label="Escolher highlight">
+            <button class="highlight-card" data-highlight="0"><span class="clip-index">01 / 50s</span><img src="https://i.ytimg.com/vi/InYk4SZSELs/hqdefault.jpg" alt="" loading="lazy"><span>CorredorX · Apresentação<small>Trecho inicial · 00:00–00:50</small></span></button>
+            <button class="highlight-card" data-highlight="1"><span class="clip-index">02 / 50s</span><img src="https://i.ytimg.com/vi/Adu3f5xZrp0/hqdefault.jpg" alt="" loading="lazy"><span>Race Diary GT7 · Circuit Spa<small>Trecho inicial · 00:00–00:50</small></span></button>
+          </div>
+        </div>
+      </div>
     </section>
     <!--VIDEO 1 apresentação -->
     <section class="bloco_superior_central">
@@ -64,6 +95,8 @@
             </div>
 
           </article>
+        </div>
+      </div>
     </section>
     <!--PARTE PESSOAIS-->
     <section>
@@ -110,7 +143,7 @@
 
     <footer>
       <div class="logo">
-        <img src="IMAGENS/carros/20970764430937968.jpg">
+        <img src="Imagens/carros/20970764430937968.jpg" alt="Carro de corrida do CorredorX">
         <p></p>
       </div>
 
@@ -118,16 +151,7 @@
         <p>&copy; 2005 direitos reservados by RodriguesTeam</p>
       </div>
     </footer>
-    <script>
-      const slides = document.querySelectorAll(".slide");
-      let indiceAtual = 0;
-
-      setInterval(() => {
-        slides[indiceAtual].classList.remove("ativo");
-
-        indiceAtual = (indiceAtual + 1) % slides.length;
-
-        slides[indiceAtual].classList.add("ativo");
-      }, 5000);
-    </script>
+  </main>
+  <script src="broadcast.js" defer></script>
 </body>
+</html>
