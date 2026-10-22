@@ -231,7 +231,8 @@ th, td {
     flex: 0 1 280px;
 }
 
-.parte-inferior>.bloco_direitos-autorais {
+.bloco_direitos-autorais {
+    text-align: center;
     flex: 0 1 280px;
 }
 
