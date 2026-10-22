@@ -1084,3 +1084,86 @@ header h1 {
 header h2 {
     line-height: 1.4;
 }   
+
+css
+/* X_ROOM — Cabeçalho com gradiente animado */
+
+.xroom-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    padding: 45px 34px;
+    background: #090714;
+    border-bottom: 1px solid rgba(123, 47, 255, 0.45);
+}
+
+#xroom-gradient {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: block;
+}
+
+.xroom-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.xroom-hero h1 {
+    margin: 0 0 20px;
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.xroom-hero h1 strong {
+    background: linear-gradient(
+        100deg,
+        #ffffff,
+        #c9a7ff,
+        #a855f7,
+        #00bbf9
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: xroom-title-flow 7s linear infinite;
+}
+
+.xroom-hero h2 {
+    margin: 0;
+    max-width: 700px;
+    color: #d4d4e5;
+    font-size: clamp(16px, 2.2vw, 25px);
+    line-height: 1.5;
+}
+
+@keyframes xroom-title-flow {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@media (max-width: 600px) {
+    .xroom-hero {
+        min-height: 230px;
+        padding: 35px 20px;
+    }
+
+    .xroom-hero h1 {
+        letter-spacing: -2px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .xroom-hero h1 strong {
+        animation: none;
+    }
+}
+
