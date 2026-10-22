@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR>
+
+<head>
+  <meta charset=" UTF-8">
+<title>INICIO | myblog | XRoom </title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <caption>Calendário de Eventos do CorredorX</caption>
+  <tbody>
+    <tr>
+      <td>A definir</td>
+      <td>Corridas de teste</td>
+      <td>Interlagos</td>
+    </tr>
+  </tbody>
+  <header>
+    <h1><strong>RACER_X</strong></h1>
+    <h2>Seja Bem vindo ao site oficial do CorredorX</h2>
+  </header>
+  <main>
+    <section class="banner_principal">
+      <img src="Imagens/20970578412312143.jpg" alt="BMW AT LEMANS">
+
+    </section>
+    <!--VIDEO 1 apresentação -->
+    <section class="bloco_superior_central">
+      <div class="video_destaque">
+
+        <div class="video_container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/InYk4SZSELs?si=jbs0nT_4wxNvogwv"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <!--VIDEO 2 MINHAS CORRIDAS-->
+    <section class="corridas_section">
+      <div class="bloco">
+
+        <h2> Minhas corridas </h2>
+
+        <div class="corridas-grid">
+
+          <article class="corrida-card">
+
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Adu3f5xZrp0?si=Ne2S482xqJE1ipoV"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="corrida-info">
+
+              <p class="corrida-categoria">Gran Turismo 7 Corrida</p>
+
+
+              <h3>Race Diary GT7 - Circuit Spa</h3>
+              <p>Confira minhas corridas e disputas no gt7</p>
+            </div>
+
+          </article>
+    </section>
+    <!--PARTE PESSOAIS-->
+    <section>
+      <div class="bloco">
+        <h2>
+          <a href="https://www.dg-edge.com/players/FV46__C0RRED0RX">
+            DG-Edge - CORREDORX
+          </a>
+        </h2>
+
+        <p>
+          Confira o perfil do CorredorX na plataforma DG-Edge,
+          onde você pode acompanhar meus resultados e estatísticas,
+          além do nosso Instagram e Youtube.
+        </p>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/@CorredorX23">
+                YouTube Oficial do CorredorX
+              </a>
+            </li>
+
+            <li>
+              <a href="https://instagram.com/i_f2f3?rpxt=OWhxNTNlZW95dnQx">
+                Instagram do oficial do CorredorX
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <div class="bloco2">
+      <a href="calendarios.html">
+        Calendario de eventos posteriores
+      </a>
+
+
+    </div>
+
+
+
+    <footer>
+      <div class="logo">
+        <img src="IMAGENS/carros/20970764430937968.jpg">
+        <p></p>
+      </div>
+
+      <div class="bloco_direitos-autorais">
+        <p>&copy; 2005 direitos reservados by RodriguesTeam</p>
+      </div>
+    </footer>
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let indiceAtual = 0;
+
+      setInterval(() => {
+        slides[indiceAtual].classList.remove("ativo");
+
+        indiceAtual = (indiceAtual + 1) % slides.length;
+
+        slides[indiceAtual].classList.add("ativo");
+      }, 5000);
+    </script>
+</body>
