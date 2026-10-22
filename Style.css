@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+
+    background-color: #ffffff;
+    color: #0e0f0e;
+
+    font-family: 'Russo One', Arial, sans-serif;
+    font-weight: 500;
+
+}
+
+img {
+    width: 250px;
+    height: auto;
+    margin: 20px;
+}
+
+header {
+    padding: 32px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+header h1 {
+    color: #000000;
+    font-size: clamp(32px, 5vw, 56px);
+    margin: 0 0 12px;
+}
+
+header h2 {
+    color: #ffffff;
+    font-size: clamp(18px, 2.5vw, 26px);
+    margin: 0 ;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #020202;
+}
+
+.bloco {
+    background-color: #1c1c1c;
+    color: #fdfdfd;
+
+    padding: 24px;
+
+    border: 1px solid #ff0000;
+    border-radius: 6px;
+
+    text-align: left;
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.bloco:hover {
+    border-color: #fefefe;
+    transform: translateY(-3px);
+}
+
+/* VÍDEO DE APRESENTAÇÃO */
+.bloco_superior_central {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.video_destaque {
+    background-color: #d61717;
+    padding: 25px;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+/* BLOCO DAS CORRIDAS */
+.bloco_corridas_ {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.bloco_corridas_ h2 {
+    color: #111;
+    margin: 0 0 20px;
+}
+
+.video_corridas1 {
+    background-color: #0a0909;
+    padding: 25px;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+/* CONTÊINER REUTILIZADO PELOS DOIS VÍDEOS */
+.video_container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 18px;
+    background-color: #000;
+}
+
+.video_container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}   
+
+.banner_principal {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.banner_principal img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+th, td {
+    border: 1px solid #fefefe;
+    padding: 8px 10px;
+
+
+}
+
+.corridas-section {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.corridas-section > h2 {
+    color: #1c1c1c;
+    font-size: 28px;
+    margin-bottom: 24px;
+    border-left: 5px solid #d61717;
+    padding-left: 14px;
+}
+
+.corridas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: 24px;
+}
+
+.corrida-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 22px;
+
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+
+    border: 1px solid #d61717;
+    border-radius: 12px;
+    box-sizing: border-box;
+
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.corrida-card:hover {
+    transform: translateY(-3px);
+    border-color: #fff;
+}
+
+.corrida-card .video_container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.corrida-card .video_container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.corrida-info h3 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+.corrida-info p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.corrida-info .corrida-categoria {
+    color: #ff4a4a;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 650px) {
+    .corrida-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+.parte-inferior>.logo {
+    flex: 0 1 280px;
+}
+
+.parte-inferior>.bloco_direitos-autorais {
+    flex: 0 1 280px;
+}
+
+.slide_foto {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.slide_ativo {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.bloco2 {
+    background-color: #1c1c1c;
+    color: #fdfdfd;
+
+    padding: 24px;
+
+    border: 1px solid #ff0000;
+    border-radius: 6px;
+
+    text-align: right;
+
+}
